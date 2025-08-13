@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/inputTitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Título"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/inputData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Data"
+            android:inputType="date" />
+
+        <EditText
+            android:id="@+id/inputDescricao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Descrição"
+            android:inputType="textMultiLine"
+            android:minLines="3" />
+
+        <EditText
+            android:id="@+id/inputModelo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Modelo"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/inputAno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ano"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/inputCor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Cor"
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/btnPostar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Postar" />
+    </LinearLayout>
+</ScrollView>
