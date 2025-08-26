@@ -8,21 +8,21 @@
     tools:context=".HomeActivity">
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/logoHomeImage"
         android:layout_width="315dp"
         android:layout_height="266dp"
         android:layout_marginBottom="4dp"
         android:background="#03A9F4"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintBottom_toTopOf="@+id/textHomeTittle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo" />
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="340dp"
-        android:layout_height="70dp"
+        android:id="@+id/textHomeTittle"
+        android:layout_width="334dp"
+        android:layout_height="124dp"
         android:layout_marginTop="8dp"
         android:fontFamily="sans-serif-black"
         android:text="Bem vindo! Faça sua carreira decolar começando por aqui!!!"
@@ -30,5 +30,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/logoHomeImage" />
+
+    <ImageView
+        android:id="@+id/arrowHomeButtom"
+        android:layout_width="123dp"
+        android:layout_height="107dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textHomeTittle"
+        app:srcCompat="@drawable/baseline_arrow_circle_right_24" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
