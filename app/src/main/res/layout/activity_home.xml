@@ -23,12 +23,12 @@
         android:id="@+id/textHomeTittle"
         android:layout_width="334dp"
         android:layout_height="124dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="sans-serif-black"
-        android:text="Bem vindo! Faça sua carreira decolar começando por aqui!!!"
+        android:text="Bem vindo! Para iniciar clique no botão abaixo!!!!!"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logoHomeImage" />
 
@@ -36,10 +36,26 @@
         android:id="@+id/arrowHomeButtom"
         android:layout_width="123dp"
         android:layout_height="107dp"
+        android:layout_marginBottom="60dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textHomeTittle"
+        app:layout_constraintTop_toBottomOf="@id/inputNome"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/baseline_arrow_circle_right_24" />
+
+    <EditText
+        android:id="@+id/inputNome"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@android:drawable/edit_text"
+        android:hint="Digite seu nome"
+        android:padding="12dp"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textHomeTittle" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

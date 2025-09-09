@@ -2,6 +2,7 @@ package com.example.linkedlncurrculos
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -17,12 +18,22 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         binding = ActivityHomeBinding.inflate(layoutInflater)
-
         setContentView(binding.root)
 
-        binding.arrowHomeButtom.setOnClickListener { // criar evento no botão arrow, que quando clicado leva até a main activity
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+        binding.arrowHomeButtom.setOnClickListener {
+            // Captura o texto digitado no campo de nome
+            val nomeDigitado = binding.inputNome.text.toString()
+
+            // Verifica se o nome não está vazio
+            if (nomeDigitado.isNotBlank()) {
+                // Cria a intent e envia o nome como extra
+                val intent = Intent(this, MainActivity::class.java)
+                intent.putExtra("nome_usuario", nomeDigitado)
+                startActivity(intent)
+            } else {
+                // Exibe uma mensagem pedindo para preencher o nome
+                Toast.makeText(this, "Por favor, digite seu nome!", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 }

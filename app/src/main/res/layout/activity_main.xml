@@ -13,17 +13,17 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="40dp"
                 android:layout_marginEnd="15dp">
 
                 <TextView
-                    android:id="@+id/tituloMain"
+                    android:id="@+id/nomeUser"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
@@ -37,33 +37,72 @@
                     android:id="@+id/descricao_tituloMain"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="Clique em play para iniciar"
+                    android:text="Aqui estão suas informações:"
                     android:textSize="16sp"
-                    app:layout_constraintEnd_toEndOf="@+id/tituloMain"
+                    app:layout_constraintEnd_toEndOf="@+id/nomeUser"
                     app:layout_constraintHorizontal_bias="0.333"
-                    app:layout_constraintStart_toStartOf="@+id/tituloMain"
-                    app:layout_constraintTop_toBottomOf="@+id/tituloMain" />
+                    app:layout_constraintStart_toStartOf="@+id/nomeUser"
+                    app:layout_constraintTop_toBottomOf="@+id/nomeUser" />
 
                 <ImageView
-                    android:id="@+id/imageView3"
+                    android:id="@+id/logomain"
                     android:layout_width="127dp"
                     android:layout_height="166dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="16dp"
+                    android:visibility="visible"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.0"
-                    app:srcCompat="@drawable/medicologo" />
+                    app:srcCompat="@drawable/medicologo"
+                    tools:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/nameUserInput"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="52dp"
+                    android:text="Nome"
+                    android:textColor="#878383"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toStartOf="@+id/logomain"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/descricao_tituloMain" />
+
+                <TextView
+                    android:id="@+id/nameUserTittle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Nome do usuario:"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toStartOf="@+id/logomain"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/descricao_tituloMain" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
                 <ImageView
-                    android:id="@+id/imageView4"
-                    android:layout_width="280dp"
-                    android:layout_height="238dp"
-                    app:srcCompat="@drawable/eu"
-                    tools:layout_editor_absoluteX="72dp"
-                    tools:layout_editor_absoluteY="225dp" />
+                    android:id="@+id/editUserButton"
+                    android:layout_width="126dp"
+                    android:layout_height="43dp"
+                    android:layout_marginStart="27dp"
+                    android:layout_marginEnd="258dp"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@android:drawable/ic_dialog_info"
+                    tools:visibility="visible" />
             </androidx.constraintlayout.widget.ConstraintLayout>
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

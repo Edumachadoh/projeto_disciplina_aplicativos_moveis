@@ -1,32 +1,39 @@
 package com.example.linkedlncurrculos
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.linkedlncurrculos.databinding.ActivityHomeBinding
 import com.example.linkedlncurrculos.databinding.ActivityMainBinding
-import com.example.linkedlncurrculos.ui.theme.LinkedlnCurrículosTheme
 
 class MainActivity : ComponentActivity() {
 
-    private lateinit var binding: ActivityMainBinding // conecta o front com o back
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        // Inicializa o binding corretamente
         binding = ActivityMainBinding.inflate(layoutInflater)
-
         setContentView(binding.root)
 
+        // Recupera o nome enviado pela Intent
+        val nome = intent.getStringExtra("nome_usuario")
 
+        // Exibe o nome no TextView
+        binding.nameUserInput.text = nome ?: "Usuário"
+
+        // Evento do botão para editar o nome
+        binding.editUserButton.setOnClickListener {
+            val nomeAtual = binding.nameUserInput.text.toString()
+
+            if (nomeAtual.isNotBlank()) {
+                val intent = Intent(this, EditUserActivity::class.java)
+                intent.putExtra("nome_usuario", nomeAtual)
+                startActivity(intent)
+            } else {
+                Toast.makeText(this, "Erro ao abrir edição de usuário", Toast.LENGTH_SHORT).show()
+            }
+        }
     }
 }
-
