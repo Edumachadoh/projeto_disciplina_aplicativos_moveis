@@ -11,13 +11,14 @@
         android:layout_height="match_parent">
 
         <LinearLayout
+            android:id="@+id/layoutEdit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="301dp"
+                android:layout_height="700dp"
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="40dp"
                 android:layout_marginEnd="15dp">
@@ -27,60 +28,51 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="4dp"
-                    android:text="Nome a ser editado:"
+                    android:text="Nome do usuário:"
                     app:layout_constraintBottom_toTopOf="@id/nomeUser"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="1.0" />
+                    app:layout_constraintVertical_bias="0.913" />
 
                 <TextView
                     android:id="@+id/nomeUser"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="36dp"
+                    android:layout_marginTop="232dp"
                     android:text="Nome"
                     android:textSize="28dp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.501"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <TextView
-                    android:id="@+id/tituloNewName"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="32dp"
-                    android:text="Novo nome:"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/nomeUser" />
-
-                <EditText
-                    android:id="@+id/novoNome"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:hint="Digite o novo nome"
-                    android:textColor="#878383"
-                    android:textSize="28dp"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.503"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tituloNewName" />
-
                 <Button
-                    android:id="@+id/salvarEdicaoBotao"
+                    android:id="@+id/salvarEdicaoCor"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="145dp"
-                    android:layout_marginTop="32dp"
                     android:layout_marginEnd="146dp"
-                    android:text="Salvar edição"
+                    android:text="Mudar cor de fundo"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.493"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/novoNome" />
+                    app:layout_constraintTop_toBottomOf="@+id/nomeUser"
+                    app:layout_constraintVertical_bias="0.332" />
+
+                <Button
+                    android:id="@+id/salvarEdicaoFonte"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mudar fonte do texto"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.493"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/nomeUser"
+                    app:layout_constraintVertical_bias="0.583" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
